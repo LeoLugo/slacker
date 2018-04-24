@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Montserrat');
+body {
+	box-sizing: border-box;
+	background-color: black;
+	position: relative;
+	font-family: 'Indie Flower';
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+.loginouterdiv {
+	position: relative;
+}
+.logintitle {
+	position: absolute;
+	color: #FF7F00;
+	top: -180px;
+	left: 500px;
+	font-family: 'Indie Flower';
+	font-size: 50px;
+}
+.logincontainer {
+	font-family: 'Indie Flower';
+	width: 800px;
+	height: 600px;
+	margin: auto;
+	background-color: #FF7F00;
+	border: 1px solid #FF7F00;
+	border-radius: 5px;
+	margin-top: 125px;
+}
+.loginform {
+	width: 100%;
+	height: 180px;
+	padding-left: 15px;
+	display: none;
+}
+.loginformform {
+	margin: auto;
+	width: 250px;
+}
+.logininput {
+	width: 100%;
+	height: 40px;
+	margin-bottom: 10px;
+	outline: none;
+	border-radius: 10px;
+	padding-left: 10px;
+}
+.loginbutton {
+	border: 2px solid #FF7F00;
+	cursor: pointer;
+	height: 30px;
+	width: 25%;
+	border-radius: 28px;
+	transition:0.3s ease all;
+	outline: none;
+	font-family: 'Indie Flower';
+}
+.loginbutton:hover {
+	background-color: #FF7F00;
+	color: white;
+	border-color: black;
+}
+.registerform {
+	width: 100%;
+	margin-top: 100px;
+	height: 180px;
+	margin-bottom: 50px;
+	padding-left: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

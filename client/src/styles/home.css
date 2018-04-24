@@ -1,0 +1,79 @@
+.homecontainer {
+	position: relative;
+}
+.hometitle {
+	position: absolute;
+	color: #FF7F00;
+	top: -180px;
+	left: 500px;
+	font-family: 'Indie Flower';
+	font-size: 50px;
+}
+.homemessagedisplay {
+	display: flex;
+	flex-direction: column-reverse;
+	color: dodgerblue;
+	width: 100%;
+	height: 80%;
+	text-align: center;
+	overflow: scroll;
+	font-family: 'Indie Flower';
+	font-size: 20px;
+}
+.homemaincontent {
+	background-color: white;
+	width: 600px;
+	height: 600px;
+	margin: auto;
+	margin-top: 125px;
+	border-radius: 10px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.homemessageform {
+	width: 100%;
+	height: 20%;
+	text-align: center;
+	background-color: #FF7F00;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.hometext {
+	text-align: center;
+}
+.homebutton {
+	border: 2px solid #FF7F00;
+	cursor: pointer;
+	height: 30px;
+	width: 40%;
+	border-radius: 28px;
+	transition:0.3s ease all;
+	outline: none;
+	font-family: 'Indie Flower';
+}
+.homeinput {
+	width: 75%;
+	height: 40px;
+	margin-bottom: 10px;
+	outline: none;
+	margin-top: 20px;
+	border-radius: 10px;
+}
+.homebutton:hover {
+	background-color: #FF7F00;
+	color: white;
+	border-color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
