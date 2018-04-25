@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux'
 import {sendMessage} from '../action'
 import '../styles/home.css'
+import {logout} from '../action'
+import {Redirect} from 'react-router-dom'
 
 
 class Home extends Component {
   state = {
-    message: ""
+    message: "",
+    isAuthenticated: false
   }
 
   manageChange = (e) => {
@@ -23,6 +26,14 @@ class Home extends Component {
     })
   }
 
+logout = (e) => {
+  e.preventDefault()
+  logout()
+  this.props.history.push('/')
+}
+
+
+
 
 
   render() {
@@ -30,22 +41,25 @@ class Home extends Component {
 
 
     return (
-      <div className="homecontainer">
-        <div className="hometitle"><h1>Slacker</h1></div>
-        <div className="homemaincontent">
-          <div className="homemessagedisplay">
-            {this.props.messages.map(msg => (
-              <div className="hometext"><p>{msg.message}</p></div>
-              ))}
-          </div>
+      <div>{this.props.isAuth ?
+        <div className="homecontainer">
+        <button className="logoutbutton" onClick={this.logout}>Logout</button>
+          <div className="hometitle"><h1>Slacker</h1></div>
+          <div className="homemaincontent">
+            <div className="homemessagedisplay">
+              {this.props.messages.map((msg, ind) => (
+                <div key={'message' + ind} className="hometext"><p>{msg.message}</p></div>
+                ))}
+            </div>
 
-          <div className="homemessageform">
-            <form onSubmit={this.manageSubmit}>
-              <input className="homeinput" onChange={this.manageChange} type="text" name="message" value={this.state.message} />
-              <button className="homebutton" type="submit">Submit</button>
-            </form> 
+            <div className="homemessageform">
+              <form onSubmit={this.manageSubmit}>
+                <input className="homeinput" onChange={this.manageChange} type="text" name="message" value={this.state.message} />
+                <button className="homebutton" type="submit">Submit</button>
+              </form> 
+            </div>
           </div>
-        </div>
+        </div>: <Redirect to="/" />}
       </div>
 
       )
@@ -55,9 +69,15 @@ class Home extends Component {
 
 function mapStateToProps(state) {
   return{
-    messages: state.messages
+    messages: state.messages,
+    isAuth: state.isAuthenticated
   }
 }
 
 
 export default connect(mapStateToProps)(Home);
+
+
+
+
+
